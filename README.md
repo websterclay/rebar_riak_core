@@ -9,7 +9,7 @@ Install [rebar](https://github.com/basho/rebar). You can do that via homebrew:
     brew update
     brew install rebar
 
-Drop these templates in `~/.rebar/templates/`, the:
+Drop these templates in `~/.rebar/templates/`, then:
 
     mkdir myapp
     cd myapp
