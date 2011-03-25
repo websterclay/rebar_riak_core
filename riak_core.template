@@ -1,0 +1,10 @@
+{variables, [{appid, "myapp"}]}.
+{template, "riak_core.app.src", "src/{{appid}}.app.src"}.
+{template, "riak_core_app.erl", "src/{{appid}}_app.erl"}.
+{template, "riak_core.erl", "src/{{appid}}.erl"}.
+{template, "riak_core.hrl", "src/{{appid}}.hrl"}.
+{template, "riak_core_sup.erl", "src/{{appid}}_sup.erl"}.
+{template, "riak_core_vnode.erl", "src/riak_{{appid}}_vnode.erl"}.
+{template, "riak_core.rebar.config", "rebar.config"}.
+{template, "riak_core.gitignore", ".gitignore"}.
+{template, "riak_core.md", "README.md"}.
