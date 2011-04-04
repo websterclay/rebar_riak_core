@@ -24,5 +24,10 @@
 {file, "riak_core_multinode.rebar.config", "rebar.config"}.
 {file, "riak_core_multinode.Makefile", "Makefile"}.
 {template, "riak_core_multinode.admin-runner", "rel/files/{{nodeid}}-admin"}.
+{chmod, 8#744, "rel/files/{{nodeid}}-admin"}.
 {template, "riak_core_multinode.console", "src/{{appid}}_console.erl"}.
 {template, "riak_core_multinode.vars.config", "rel/vars.config"}.
+{template, "riak_core_multinode.dev1.config", "rel/vars/dev1.config"}.
+{template, "riak_core_multinode.dev2.config", "rel/vars/dev2.config"}.
+{template, "riak_core_multinode.dev3.config", "rel/vars/dev3.config"}.
+

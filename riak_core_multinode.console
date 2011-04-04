@@ -23,7 +23,7 @@ join(_) ->
     error.
 
 do_join(NodeStr) when is_list(NodeStr) ->
-    join(riak_core_util:str_to_node(NodeStr));
+    do_join(riak_core_util:str_to_node(NodeStr));
 do_join(Node) when is_atom(Node) ->
     {ok, OurRingSize} = application:get_env(riak_core, ring_creation_size),
     case net_adm:ping(Node) of
