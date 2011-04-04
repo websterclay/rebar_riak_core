@@ -1,0 +1,28 @@
+{variables, [{appid, "myapp"}, {nodeid, "mynode"}]}.
+
+%% based on simplenode
+{template, "riak_core_multinode.reltool.config", "rel/reltool.config"}.
+{file, "riak_core_multinode.erl.script", "rel/files/erl"}.
+{chmod, 8#744, "rel/files/erl"}.
+{file, "riak_core_multinode.nodetool", "rel/files/nodetool"}.
+{chmod, 8#744, "rel/files/nodetool"}.
+{file, "riak_core_multinode.runner", "rel/files/{{nodeid}}"}.
+{chmod, 8#744, "rel/files/{{nodeid}}"}.
+{file, "riak_core_multinode.app.config", "rel/files/app.config"}.
+{template, "riak_core_multinode.vm.args", "rel/files/vm.args"}.
+
+%% copy from riak_core
+{template, "riak_core.app.src", "src/{{appid}}.app.src"}.
+{template, "riak_core_app.erl", "src/{{appid}}_app.erl"}.
+{template, "riak_core.erl", "src/{{appid}}.erl"}.
+{template, "riak_core.hrl", "src/{{appid}}.hrl"}.
+{template, "riak_core_sup.erl", "src/{{appid}}_sup.erl"}.
+{template, "riak_core_vnode.erl", "src/{{appid}}_vnode.erl"}.
+{template, "riak_core.gitignore", ".gitignore"}.
+
+%% rest of multinode stuff
+{file, "riak_core_multinode.rebar.config", "rebar.config"}.
+{file, "riak_core_multinode.Makefile", "Makefile"}.
+{template, "riak_core_multinode.admin-runner", "rel/files/{{nodeid}}-admin"}.
+{template, "riak_core_multinode.console", "src/{{appid}}_console.erl"}.
+{template, "riak_core_multinode.vars.config", "rel/vars.config"}.

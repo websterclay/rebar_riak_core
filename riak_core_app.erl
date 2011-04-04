@@ -12,8 +12,8 @@
 start(_StartType, _StartArgs) ->
     case {{appid}}_sup:start_link() of
         {ok, Pid} ->
-            ok = riak_core:register_vnode_module(riak_{{appid}}_vnode),
-            ok = riak_core_node_watcher:service_up(riak_{{appid}}, self()),
+            ok = riak_core:register_vnode_module({{appid}}_vnode),
+            ok = riak_core_node_watcher:service_up({{appid}}, self()),
             {ok, Pid};
         {error, Reason} ->
             {error, Reason}

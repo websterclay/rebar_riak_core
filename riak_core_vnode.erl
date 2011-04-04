@@ -1,4 +1,4 @@
--module(riak_{{appid}}_vnode).
+-module({{appid}}_vnode).
 -behaviour(riak_core_vnode).
 -include("{{appid}}.hrl").
 
