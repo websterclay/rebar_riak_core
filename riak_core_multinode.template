@@ -1,4 +1,4 @@
-{variables, [{appid, "myapp"}, {nodeid, "mynode"}]}.
+{variables, [{appid, "myapp"}, {nodeid, "{{appid}}"}]}.
 
 %% based on simplenode
 {template, "riak_core_multinode.reltool.config", "rel/reltool.config"}.
