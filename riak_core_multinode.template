@@ -22,7 +22,7 @@
 
 %% rest of multinode stuff
 {file, "riak_core_multinode.rebar.config", "rebar.config"}.
-{file, "riak_core_multinode.Makefile", "Makefile"}.
+{template, "riak_core_multinode.Makefile", "Makefile"}.
 {template, "riak_core_multinode.admin-runner", "rel/files/{{nodeid}}-admin"}.
 {chmod, 8#744, "rel/files/{{nodeid}}-admin"}.
 {template, "riak_core_multinode.console", "src/{{appid}}_console.erl"}.

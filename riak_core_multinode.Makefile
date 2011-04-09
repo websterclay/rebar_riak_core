@@ -1,3 +1,5 @@
+.PHONY: deps rel
+
 all: deps compile
 
 compile:
@@ -15,7 +17,13 @@ distclean: clean devclean relclean
 rel: all
 	./rebar generate
 
+relclean:
+	rm -rf rel/{{nodeid}}
+
 devrel: dev1 dev2 dev3
+
+devclean:
+	rm -rf dev
 
 dev1 dev2 dev3:
 	mkdir -p dev
