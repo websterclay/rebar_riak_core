@@ -1,6 +1,6 @@
 
 ## Name of the node
--name {{node}}
+-name  \{\{node\}\}
 
 ## Cookie for distributed erlang
 -setcookie {{nodeid}}
