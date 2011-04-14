@@ -18,6 +18,8 @@
 {template, "riak_core.hrl", "apps/{{appid}}/src/{{appid}}.hrl"}.
 {template, "riak_core_sup.erl", "apps/{{appid}}/src/{{appid}}_sup.erl"}.
 {template, "riak_core_vnode.erl", "apps/{{appid}}/src/{{appid}}_vnode.erl"}.
+{template, "riak_core_ring_handler.erl", "apps/{{appid}}/src/{{appid}}_ring_event_handler.erl"}.
+{template, "riak_core_node_event_handler.erl", "apps/{{appid}}/src/{{appid}}_node_event_handler.erl"}.
 {template, "riak_core.gitignore", ".gitignore"}.
 
 %% rest of multinode stuff

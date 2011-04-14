@@ -49,7 +49,7 @@ devrel: dev1 dev2 dev3
 devclean:
 	rm -rf dev
 
-dev1 dev2 dev3:
+dev1 dev2 dev3: all
 	mkdir -p dev
 	(cd rel && ../rebar generate target_dir=../dev/$@ overlay_vars=vars/$@.config)
 
@@ -57,7 +57,7 @@ dev1 dev2 dev3:
 ##
 ## Dialyzer
 ##
-APPS = kernel stdlib sasl erts ssl tools os_mon runtime_tools crypto inets \
+APPS = kernel stdlib sasl erts ssl tools os_mon runtime_tools crypto inets \\
 	xmerl webtool snmp public_key mnesia eunit syntax_tools compiler
 COMBO_PLT = $(HOME)/.{{appid}}_combo_dialyzer_plt
 
