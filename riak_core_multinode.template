@@ -12,20 +12,20 @@
 {template, "riak_core_multinode.vm.args", "rel/files/vm.args"}.
 
 %% copy from riak_core
-{template, "riak_core.app.src", "src/{{appid}}.app.src"}.
-{template, "riak_core_app.erl", "src/{{appid}}_app.erl"}.
-{template, "riak_core.erl", "src/{{appid}}.erl"}.
-{template, "riak_core.hrl", "src/{{appid}}.hrl"}.
-{template, "riak_core_sup.erl", "src/{{appid}}_sup.erl"}.
-{template, "riak_core_vnode.erl", "src/{{appid}}_vnode.erl"}.
+{template, "riak_core.app.src", "apps/{{appid}}/src/{{appid}}.app.src"}.
+{template, "riak_core_app.erl", "apps/{{appid}}/src/{{appid}}_app.erl"}.
+{template, "riak_core.erl", "apps/{{appid}}/src/{{appid}}.erl"}.
+{template, "riak_core.hrl", "apps/{{appid}}/src/{{appid}}.hrl"}.
+{template, "riak_core_sup.erl", "apps/{{appid}}/src/{{appid}}_sup.erl"}.
+{template, "riak_core_vnode.erl", "apps/{{appid}}/src/{{appid}}_vnode.erl"}.
 {template, "riak_core.gitignore", ".gitignore"}.
 
 %% rest of multinode stuff
-{file, "riak_core_multinode.rebar.config", "rebar.config"}.
+{template, "riak_core_multinode.rebar.config", "rebar.config"}.
 {template, "riak_core_multinode.Makefile", "Makefile"}.
 {template, "riak_core_multinode.admin-runner", "rel/files/{{nodeid}}-admin"}.
 {chmod, 8#744, "rel/files/{{nodeid}}-admin"}.
-{template, "riak_core_multinode.console", "src/{{appid}}_console.erl"}.
+{template, "riak_core_multinode.console", "apps/{{appid}}/src/{{appid}}_console.erl"}.
 {template, "riak_core_multinode.vars.config", "rel/vars.config"}.
 {template, "riak_core_multinode.dev1.config", "rel/vars/dev1.config"}.
 {template, "riak_core_multinode.dev2.config", "rel/vars/dev2.config"}.

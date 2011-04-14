@@ -1,3 +1,9 @@
 *.beam
 .eunit
 deps/*
+apps/{{appid}}/ebin
+*~
+dev/*
+doc/*
+rel/{{nodeid}}
+
