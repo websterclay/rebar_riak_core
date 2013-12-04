@@ -15,8 +15,8 @@ Drop these templates in `~/.rebar/templates/`, then:
     cd myapp
     rebar create template=riak_core appid=myapp
     git init
-    git commit -am "omg riak_core"
-    git push
+    git add .
+    git commit -m "omg riak_core"
 
 Integrate this app into your node's `rebar.config`:
 
